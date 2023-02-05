@@ -11,6 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.6"
+    "@astrojs/partytown": "^1.0.3",
+    "astro": "^2.0.6",
+    "astro-google-analytics": "^1.0.3"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0",
+    "@uswds/uswds": "^3.3.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0"
   }
 }

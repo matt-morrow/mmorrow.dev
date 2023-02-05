@@ -23,6 +23,15 @@
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
 
+	--accent-lighter-secondary: #179aeb;
+	--accent-light-secondary: #b280cb;
+	--accent-regular-secondary: #179aeb;
+	--accent-dark-secondary: #0A5C8F;
+	--accent-darker-secondary: #0A5C8F;
+	--accent-overlay-secondary: hsla(280, 89%, 67%, 0.33);
+	--accent-subtle-overlay-secondary: var(--accent-overlay);
+	--accent-text-over-secondary: var(--gray-999);
+
 	--link-color: var(--accent-regular);
 
 	/* Gradients */
@@ -42,6 +51,10 @@
 		var(--accent-regular),
 		var(--accent-dark)
 	);
+	--gradient-accent-green: linear-gradient(
+		120deg,
+		#0b34d9,
+		var(--accent-dark-secondary)	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
 	/* Shadows */
