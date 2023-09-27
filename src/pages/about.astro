@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+	title="About | Matthew Morrow"
+	description="About Matthew Morrow Lorem Ipsum"
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About (Under Construction)"
+				tagline="See below to delve deeper into my personal, professional, and academic background to learn more."
+			>
+				<!-- <img
+					width="1553"
+					height="873"
+					src="/assets/museum.jpeg"
+					alt="Matthew Morrow posing in a museum"
+				/> -->
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, Diam quis enim lobortis
+						scelerisque fermentum dui faucibus in ornare.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>
+						2018-2022: Johns Hopkins University—MS in Bioinformatics
+					</p>
+					<p>2013-2017: Clemson University—BS in Genetics</p>
+					<p>2012-2016: Clemson University—BS in Biochemistry</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Work Experience</h2>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet, Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills and Competencies</h2>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet, Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	ul li::marker {
+		color: #6495ed;
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
